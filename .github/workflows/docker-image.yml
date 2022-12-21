@@ -21,9 +21,7 @@ jobs:
             username: ${{ secrets.DOCKERHUB_USERNAME }}
             password: ${{ secrets.DOCKERHUB_PASSWORD }}
         - name: Build the latest Docker image
-          run: docker build -t udagram-frontend . 
-        - name: Tag the lastest Docker image
-          run: docker tag udagram-frontend ngocnkhe151168/udagram-frontend:latest
+          run: docker build -t udagram-reverseproxy ./udagram-reverseproxy --tag udagram-reverseproxy ngocnkhe151168/udagram-reverseproxy:v3b
         - name: Push the latest Docker image
-          run: docker push ngocnkhe151168/udagram-frontend:latest
+          run: docker push ngocnkhe151168/udagram-reverseproxy:v3b
 
