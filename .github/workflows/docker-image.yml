@@ -23,5 +23,5 @@ jobs:
         - name: Build the latest Docker image
           run: docker build https://github.com/ngocnkhe15118/project3/blob/main/udagram-frontend/Dockerfile
         - name: Push the latest Docker image
-          run: docker push ngocnkhe151168/udagram-reverseproxy:v3b
+          run: docker push ngocnkhe151168/udagram-frontend:v3b
 
